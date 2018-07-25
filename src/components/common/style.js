@@ -16,6 +16,11 @@ const styleSheet={
         color:'#fff'
 
     },
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
     ContainerStyle:{
         borderWidth:1,
         borderRadius:2,
@@ -44,6 +49,28 @@ const styleSheet={
     imageSytle:{
         width:70,
         height:70
+      },
+      TextStyle:{
+        width: 300,
+        height: 44,
+        padding: 10,
+        borderWidth: 1,
+        borderColor: '#4a73ab',
+        marginBottom: 10,
+        borderRadius:3,
+        textAlign:'center'
+  
+      },
+      ButtonStyle:{
+          flex:1,
+          alignSelf:'stretch',
+          backgroundColor:'#4a73ab',
+          borderRadius:5,
+          borderWidth:1,
+          borderColor:'#4a73ab',
+          marginLeft:5,
+          
+
       }
 
     

@@ -1,12 +1,13 @@
 import {combineReducers} from 'redux';
-import LibraryReducer from './LibraryReducer';
+import reducerList from './ReducerList';
+
 
 // combine all reducers in one fuction
 
 const AppReducers= combineReducers(
     {
-        libraries:LibraryReducer  // this is the reducer that return data
-        }
+        libraries: ()=>[]
+   }
 );
 
 export default AppReducers;
