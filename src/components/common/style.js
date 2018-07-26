@@ -1,5 +1,5 @@
 
-const styleSheet={
+const style={
     headerStyle:{
         backgroundColor:'#4a73ab',
         paddingTop:20,
@@ -34,12 +34,11 @@ const styleSheet={
         marginLeft:5,
         marginRight:5,
         marginTop:10,
-      
 
     },
     ContainerCardItemStyle:{
-        borderBottomWidth:1,
-        padding:5,
+        
+        padding:3,
         backgroundColor:'#fff',
         justifyContent:'flex-start',
         flexDirection:'row',
@@ -69,11 +68,20 @@ const styleSheet={
           borderWidth:1,
           borderColor:'#4a73ab',
           marginLeft:5,
+          marginRight:5,
           
 
-      }
+      },
+      ButtonTextStyle:{
+        alignSelf:'center',
+        paddingTop:10,
+        paddingBottom:10, 
+        fontSize:15,     
+        color:'#fff', 
+
+    }
 
     
 }
 
-export default styleSheet;
+export  {style};

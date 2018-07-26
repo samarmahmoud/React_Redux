@@ -1,36 +1,59 @@
 import React ,{Component} from 'react';
-import {Card,CardItems,Input,Button} from './common';
+import {Card,CardItems,Input,Button,style} from './common';
+import {View ,Text} from 'react-native';
+import {OnEmailChang ,OnPasswordChang} from '../actions/index';
+import { connect } from 'tls';
 
-export default class Loginform extends Component{
+ class Loginform extends Component{
+    
     constructor(props) {
         super(props);
-        this.state = {userName: '',Password:''};
+        this.state = {email: '',Password:''};
+        
       }
+OnEmailTextChang(text)
+{
+    this.props.OnEmailChang(text);
+}
+OnPasswordTextChang(text)
+{
+    this.props.OnPasswordChang(text);
+}
+
+    renderMessage(){
+      
+       if(this.state.email=="samar" && this.state.Password=="123")
+       {
+        alert("Done!");
+       }
+    }
+
     render(){
         return(
        
         <Card>
            <CardItems>
-                <Input value={this.state.userName}
-                 onChangeText={userName=>this.setState({userName})}
-                 placeholder="user name"
-                 
+                <Input value={this.state.email}
+                 onChangeText={this.OnEmailTextChang.bind(this)}
+                 type="Email"
                  >
                 </Input>
            </CardItems>
            <CardItems>
            <Input value={this.state.Password}
-                 onChangeText={userName=>this.setState({Password})}
-                 placeholder="password"
+                 onChangeText={this.OnPasswordChang.bind(this)}
+                 type="password"
                  >
            </Input>
            </CardItems>
            <CardItems>
-            <Button
-               title={'Login'} onPress={()=>{}}/>
+            <Button title={"Login"} onPress={this.renderMessage.bind(this)}/>
+              
           </CardItems>
         </Card>
        
         );
     }
 };
+
+export default connect(null,{OnEmailChang,OnPasswordChang}) (Loginform)  

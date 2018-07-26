@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
-import reducerList from './ReducerList';
+import AuthenReducer from'./AuthReducer';
 
 
 // combine all reducers in one fuction
 
 const AppReducers= combineReducers(
     {
-        libraries: ()=>[]
+       Authen:AuthenReducer
    }
 );
 
