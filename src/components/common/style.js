@@ -20,6 +20,7 @@ const style={
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        // backgroundColor:'#4a73ab',
       },
     ContainerStyle:{
         borderWidth:1,
