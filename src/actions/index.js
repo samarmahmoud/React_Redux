@@ -21,9 +21,9 @@ export const LoginFun=(email,password)=>{
 
    return (dispatch)=>{
        firebase.auth().signInWithEmailAndPassword(email,password)
-       .then(Actions.Welcome());    
+       .then(Actions.MainPage());    
          
    
     };
 };
-   
+    
